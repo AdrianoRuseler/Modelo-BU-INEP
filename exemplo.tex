@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Universidade Federal de Santa Catarina             
+% Biblioteca Universitária                     
+%----------------------------------------------------------------------
+% Exemplo de utilização da documentclass ufscThesis
+%----------------------------------------------------------------------                                                           
+% (c)2010 Roberto Simoni (roberto.emc@gmail.com)
+%         Carlos R Rocha (cticarlo@gmail.com)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{ufscThesis} % Definicao do documentclass ufscThesis
+
+
+%----------------------------------------------------------------------
+% Pacotes usados especificamente neste documento
+\usepackage{graphicx} % Possibilita o uso de figuras e gráficos
+\usepackage{color}    % Possibilita o uso de cores no documento
+
+
+\usepackage[brazil]{babel}
+
+\usepackage{nomencl} % Pacote necessário para a lista de siglas.
+
+\usepackage{epstopdf}
+\usepackage{mathcomp}
+\usepackage{gensymb}
+\usepackage[enable-survey]{pdfpages}    %para incluir pdf   [enable-survey]
+
+\usepackage{booktabs} % Para Tabelas
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{url} % Para incluir links
+
+%----------------------------------------------------------------------
+% Comandos criados pelo usuário
+\newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
+
+%----------------------------------------------------------------------
+% Identificadores do trabalho
+% Usados para preencher os elementos pré-textuais
+\instituicao[a]{Universidade Federal de Santa Catarina} % Opcional
+\departamento[a]{Biblioteca Universitária}
+\curso[o]{Curso de Aperfeiçoamento na Elaboração de Documentos Científicos}
+\documento[o]{Exemplo} % Opcional (Tese é o padrão)
+\titulo{Exemplo de Uso do documentclass ufscThesis}
+\subtitulo{Versão Básica} % Opcional
+\autor{Carlos R Rocha, Roberto Simoni}
+\grau{Apoiadores ao Uso de Software Livre}
+\local{Florianópolis} % Opcional (Florianópolis é o padrão)
+\data{10}{Outubro}{2012}
+\orientador[Orientadora]{Narcisa de Fátima Amboni, Dr.Eng.}
+\coorientador[Coorientadora]{Roberta Moraes de Bem, M.Eng.}
+\coordenador[Coordenador]{João Ninguém}
+
+
+
+\numerodemembrosnabanca{6} % Isso decide se haverá uma folha adicional
+\orientadornabanca{nao} % Se faz parte da banca definir como sim
+\coorientadornabanca{sim} % Se faz parte da banca definir como sim
+\bancaMembroA{Presidente da banca} %Nome do presidente da banca
+\bancaMembroB{Segundo membro}      % Nome do membro da Banca
+\bancaMembroC{Terceiro membro}     % Nome do membro da Banca
+\bancaMembroD{Quarto membro}       % Nome do membro da Banca
+%\bancaMembroE{Prof. quinto membro}       % Nome do membro da Banca
+%\bancaMembroF{Prof. sexto membro}        % Nome do membro da Banca
+%\bancaMembroG{Prof. sétimo membro}       % Nome do membro da Banca
+
+
+
+\dedicatoria{A todos os usuários e apoiadores do uso de software livre}{Nome do Autor}
+
+
+
+
+
+
+\epigrafe{Aprender é a única coisa de que a mente nunca se cansa, nunca tem medo e nunca se arrepende.}
+{Leonardo da Vinci}
+
+
+\textoResumo {Este é um documento para exemplificar o uso do documentclass \emph{ufscThesis},
+que pretende implementar as normas de formatação de documentos científicos da Biblioteca
+Universitária da Universidade Federal de Santa Catarina. Sugere-se que quem for começar a
+escrever uma tese, dissertação ou outro documento necessário para a conclusão de um curso
+da UFSC utilize este exemplo como base para sua redação, substituindo o seu conteúdo original.
+Com isso, deve-se obter um documento o mais próximo possível das normas de formatação em vigor
+na UFSC.}
+
+\palavrasChave {Exemplo. LaTeX. Gabarito. UFSC. Biblioteca Universitária.}
+
+ 
+\textAbstract {This document exemplifies the use of the \emph{ufscThesis} documentclass,
+which aims to implement the scientific document formatting norms of the University Library of
+Federal University of Santa Catarina. Is is sugested that whoever is beginning to write a thesis,
+dissertation or other document necessary to conclude an UFSC course uses this example as a basis,
+replacing its original content. In this way, the documento obtained will be as close as possible
+of the formatting norms vigorating in UFSC.}
+\keywords {Example. LaTeX. Template. UFSC. University Library.}
+
+%----------------------------------------------------------------------
+% Início do documento                                
+\begin{document}
+%--------------------------------------------------------
+% Elementos pré-textuais
+\capa  
+\folhaderosto[comficha] % Se nao quiser imprimir a ficha, é só não usar o parâmetro
+\folhaaprovacao
+\paginadedicatoria
+\paginaagradecimento
+\paginaepigrafe
+\paginaresumo
+\paginaabstract
+%\pretextuais % Substitui todos os elementos pre-textuais acima
+\listadefiguras % as listas dependem da necessidade do usuário
+\listadetabelas 
+\listadeabreviaturas
+\listadesimbolos
+\sumario
+%--------------------------------------------------------
+
+% Elementos textuais
+
+
+
+\include{Capitulos/01/chapter_01}
+\include{Capitulos/02/chapter_02}
+\include{Capitulos/03/chapter_03} 
+\include{Capitulos/04/chapter_04}
+
+
+
+
+\bibliographystyle{ufscThesis/ufsc-alf}
+\bibliography{bibliografia}
+
+
+%--------------------------------------------------------
+% Elementos pós-textuais
+
+\apendice
+
+\include{Apendices/A/apendice_A}
+
+
+
+\anexo
+
+
+\include{Anexos/A/anexo_A}
+
+
+\end{document}
