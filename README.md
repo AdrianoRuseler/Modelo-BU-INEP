@@ -1,6 +1,16 @@
 Modelo-BU-INEP
 ==============
 
+Referências:
+
+Zotero:  http://www.zotero.org/
+Jabref:  http://jabref.sourceforge.net/
+
+
+
+
+
+
 ufscThesis - Template LaTeX 
 ----------------------------
 
